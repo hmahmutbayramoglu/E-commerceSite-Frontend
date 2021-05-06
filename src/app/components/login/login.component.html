@@ -1,0 +1,25 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+        <h2 class="active"> Sign In </h2>
+
+
+
+        <div class="fadeIn first">
+            <img src="https://i.pinimg.com/originals/75/fa/9b/75fa9b17f632646e5ae7fae3cf837761.jpg" id="icon" alt="User Icon" />
+        </div>
+
+        <form [formGroup]="loginForm">
+            <input formControlName="email" type="text" id="login" class="fadeIn second" name="login" placeholder="E-Posta" value="" required="">
+            <input formControlName="password" type="password" id="password" class="fadeIn third" name="login" placeholder="password" onblur="this.setAttribute('value', this.value);" value="" required="">
+            <input type="submit" class="fadeIn fourth" value="Log In" (click)="login()">
+
+        </form>
+
+
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>

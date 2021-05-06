@@ -1,0 +1,19 @@
+<a *ngIf="cartItems.length > 0" class="nav-link dropdown-toggle animated animate__rotateIn" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+    <bi class="sepetIcon" name="cart-plus-fill"></bi> Sepetim &nbsp;
+    <span class="sepetAdet animate__animated animate__bounce">{{
+    sepetAdet()
+  }}</span>
+</a>
+<div *ngIf="cartItems.length > 0" class="dropdown-menu">
+    <li *ngFor="let cartItem of cartItems" class="dropdown-item">
+        <div class="values">
+            {{ cartItem.product.productName }} &nbsp;
+            <span class="adetSpan">({{ cartItem.quantity }}) </span>
+        </div>
+        <div class="btn btn-danger cartRemoveBtn" (click)="removeFromCart(cartItem.product)">Sil</div>
+    </li>
+    <hr />
+    <div class="buttons">
+        <li href="" class="btn btn-primary">Sepete Git</li>
+    </div>
+</div>

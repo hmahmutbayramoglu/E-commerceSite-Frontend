@@ -1,0 +1,26 @@
+<nav>
+    <img src="../../../assets/img/1.jpg" alt="">
+    <div class="content">
+        <h2>Categories</h2>
+        <br>
+        <hr>
+
+        <ul class="list-group">
+            <li routerLink="/products" [style]="getAllCategoryStyle()">
+                <h5>
+                    All Products
+                </h5>
+            </li>
+            <li (click)="setCurrentCategory(category)" *ngFor="let category of categories" [style]="getCurrentCategoryStyle(category)" routerLink="/products/category/{{category.categoryId}}">
+                <h5>
+                    <bi name="bookmarks"></bi> {{category.categoryName}}
+                </h5>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+
+</nav>
